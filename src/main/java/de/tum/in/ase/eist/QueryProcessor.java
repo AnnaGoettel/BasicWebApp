@@ -29,7 +29,8 @@ public class QueryProcessor {
             String[] number = numbers.split(",");
             List ints = new ArrayList<Integer>();
             for(String s : number){
-                Integer inttest = Integer.parseInt(s);
+                String t= s.trim();
+                Integer inttest = Integer.parseInt(t);
                 ints.add(inttest);
             }
             return String.valueOf(Collections.max(ints));
