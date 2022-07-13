@@ -2,6 +2,11 @@ package de.tum.in.ase.eist;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class QueryProcessor {
 
@@ -15,20 +20,24 @@ public class QueryProcessor {
             return "anna";
         } else if (query.contains("plus")) {
             String[] tokens = query.split(" ");
-            String token1 = tokens[2];
-            String token2 = tokens[4];
+            String token1 = tokens[3];
+            String token2 = tokens[5];
             return String.valueOf(Integer.parseInt(token1)+Integer.parseInt(token2));
        /* } else if (query.contains("following")) {
             String[] interim = query.split(":");
             String numbers = interim[1];
-            String[] number = query.split(",");
+            String[] number = numbers.split(",");
+            List ints = new ArrayList<Integer>();
             for(String s : number){
-                Integer.parseInt(s);
-
+                Integer inttest = Integer.parseInt(s);
+                ints.add(inttest);
             }
-            return tokens[2]+tokens[4];
+            Integer maximum= Collections.max(ints);
+            return String.valueOf(maximum);
 
         */
+
+
         } else{
             return "";
         }
