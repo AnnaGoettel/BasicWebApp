@@ -15,9 +15,23 @@ public class QueryProcessor {
             return "anna";
         } else if (query.contains("plus")) {
             String[] tokens = query.split(" ");
+            String token1 = tokens[2];
+            String token2 = tokens[4];
+            return String.valueOf(Integer.parseInt(token1)+Integer.parseInt(token2));
+       /* } else if (query.contains("following")) {
+            String[] interim = query.split(":");
+            String numbers = interim[1];
+            String[] number = query.split(",");
+            for(String s : number){
+                Integer.parseInt(s);
+
+            }
             return tokens[2]+tokens[4];
+
+        */
         } else{
             return "";
         }
     }
+    //which of the following numbers is the largest: 984, 54, 11, 940"
 }
