@@ -14,8 +14,8 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
             return "anna";
         } else if (query.contains("plus")) {
-            // TODO extend the programm here //commentar
-            return "3";
+            String[] tokens = query.split(" ");
+            return tokens[2]+tokens[4];
         } else{
             return "";
         }
