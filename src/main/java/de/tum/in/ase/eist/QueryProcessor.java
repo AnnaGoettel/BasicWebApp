@@ -23,20 +23,16 @@ public class QueryProcessor {
             String token1 = tokens[3];
             String token2 = tokens[5];
             return String.valueOf(Integer.parseInt(token1)+Integer.parseInt(token2));
-       /* } else if (query.contains("following")) {
+        } else if (query.contains("following")) {
             String[] interim = query.split(":");
-            String numbers = interim[1];
+            String numbers = interim[2];
             String[] number = numbers.split(",");
             List ints = new ArrayList<Integer>();
             for(String s : number){
                 Integer inttest = Integer.parseInt(s);
                 ints.add(inttest);
             }
-            Integer maximum= Collections.max(ints);
-            return String.valueOf(maximum);
-
-        */
-
+            return String.valueOf(Collections.max(ints));
 
         } else{
             return "";
